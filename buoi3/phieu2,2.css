@@ -1,0 +1,25 @@
+.harder{
+    width: 700px;
+    height: 300px;
+    background-color: #A06D21;
+    color: #ffffff;
+    font-family: Tahoma;
+    
+}
+h1{
+    text-align: center;
+    color: #FFCC00;
+}
+.ah{
+    width: 250px;
+    height: 300px;
+    background-position: left center;
+    
+    
+}
+
+.ha {
+    background: url('./img/van-ly-truong-thanh-trung-quoc.jpg') no-repeat;
+    background-size: 30vh 300px;
+    background-position: center;
+}

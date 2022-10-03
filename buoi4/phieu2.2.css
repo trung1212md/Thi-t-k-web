@@ -1,0 +1,12 @@
+.nav-menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color:blue ;
+    height: 40px;
+    line-height: 40px;
+
+}
+.nav-menu li:hover{
+    background-color: red;
+}

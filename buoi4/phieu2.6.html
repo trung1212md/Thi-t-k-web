@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+        }
+
+        header img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .menu {
+            display: flex;
+            list-style: none;
+            background-color: aquamarine;
+        }
+
+        .menu>li {
+            padding: 15px 37px;
+            color: red;
+            border-right: 1px solid blue;
+        }
+
+        .menu>li:last-child {
+            border-right: none;
+        }
+
+        .sub-nav {
+            position: relative;
+        }
+
+        .sub-nav .menu-child {
+            background-color: aquamarine;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: -50px;
+            list-style: none;
+            text-align: center;
+            display: none;
+        }
+
+        .menu-child li {
+            padding: 10px 0;
+            border-bottom: 2px dotted #000;
+        }
+
+        .menu li:hover {
+            cursor: pointer;
+            background-color: aliceblue;
+        }
+
+        .sub-nav:hover .menu-child {
+            display: block;
+        }
+
+        .content {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .content .list-book ul {
+            width: 250px;
+        }
+
+        .content .list-book ul li {
+            margin-left: 30px;
+        }
+
+        .content .content-book {
+            margin-left: 20px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="./banner-1631296__340.webp" alt="">
+        </header>
+
+        <ul class="menu">
+            <li>Trang chủ</li>
+            <li>Truyện Blog</li>
+            <li class="sub-nav">Truyện ngắn
+                <ul class="menu-child">
+                    <li>Truyện ngắn về tình yêu</li>
+                    <li>Truyện ngắn về gia đình</li>
+                    <li>Truyện ngắn về bạn bè</li>
+                    <li>Truyện ngắn về đời sống</li>
+                </ul>
+            </li>
+            <li>Sách hay</li>
+            <li>Tâm sự</li>
+            <li>Tiểu thuyết</li>
+            <li>Tin tức</li>
+            <li>Truyện cười</li>
+            <li>Liên hệ</li>
+        </ul>
+
+        <div class="content">
+            <div class="list-book">
+                <h2 style="margin-bottom: 20px;">Tủ sách</h2>
+                <ul>
+                    <li>Truyện nổi bật</li>
+                    <li>Truyện mới</li>
+                    <li>Truyện kiếm hiếp mới</li>
+                    <li>Truyện khoa học viễn tưởng</li>
+                    <li>Truyện khoa học viễn tưởng</li>
+                    <li>Truyện khoa học viễn tưởng</li>
+                    <li>Truyện khoa học viễn tưởng</li>
+                </ul>
+            </div>
+
+            <div class="img-book">
+                <img src="./Book.jfif" alt="">
+            </div>
+
+            <div class="content-book">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo maiores ut hic rerum autem possimus
+                    cupiditate tempore aspernatur ducimus delectus, voluptate deserunt inventore adipisci iste, facere
+                    consequuntur atque voluptatem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo
+                    maiores ut hic rerum autem possimus cupiditate tempore aspernatur ducimus delectus, voluptate
+                    deserunt inventore adipisci iste, facere consequuntur atque voluptatem?Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Quae quo maiores ut hic rerum autem possimus cupiditate tempore
+                    aspernatur ducimus delectus, voluptate deserunt inventore adipisci iste, facere consequuntur atque
+                    voluptatem?</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Bản quyền CNTT_HAUI.com</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+

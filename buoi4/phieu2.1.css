@@ -1,0 +1,11 @@
+.table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: white;
+}
+caption{
+    background-color: darkgoldenrod;
+    border-bottom: 2px;
+    border-color: black;
+
+}

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    padding: 0 40px;
+    
+    
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: blue;
+    height: 40px;
+    line-height: 40px;
+  
+}
+.menu li:hover{
+    background-color: red;
+   
+}
+ul>li{
+    position: relative;
+}
+.menu-cap1 {
+    list-style: none;
+    position: absolute;
+    left: 0px;
+    
+    display: none;
+    
+    
+   
+}
+ul>li:hover>ul{
+    display: flex;
+}
+
+.menu-cap1 li{
+    font-size: 15px;
+    width: 120px;
+}
+
+.menu-cap1 li:hover{
+   display: block;
+   background-color: red;
+}

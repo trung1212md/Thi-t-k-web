@@ -1,0 +1,20 @@
+.text{
+    border: 1px solid red ;
+    width: 500px;
+    height: 300px;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #FFD2FF;
+
+}
+p{
+    text-indent: 50px;/*thu dau dong */
+   letter-spacing: 3px; /*cách các chữ*/
+   text-align:justify; /*căn đều chữ*/
+   font-size: 15px;
+
+
+}
+h1{
+    color: #4CAF50;
+}
