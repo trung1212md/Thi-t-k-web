@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><h2>Tìm từ dài nhất</h2></td>
+        </tr>
+        <tr>
+            <td><Label>Nhập sâu</Label></td>
+            <td><input type="text" id="nhap"></td>
+        </tr>
+        <tr>
+            <td><label for="">Thông báo kết quả:</label></td>
+            <td><input type="text" id="ketqua"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="xoa()">xoa</button>
+                <button onclick="search()">tim kiem</button>
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        let nhap=document.getElementById("nhap");
+        let xuat=document.getElementById("ketqua");
+
+        function search()
+        {
+            let arrnhap=nhap.value.split('');
+            let max=arrnhap[0].length;
+            let strText;
+
+            for(let i=0;i<arrnhap.length;i++)
+            {
+                if(arrnhap[i].length>max)
+                {
+                    max=arrnhap[i].length;
+                }
+            }
+
+            for(let i=0;i<arrnhap.length;i++)
+            {
+                if(arrnhap[i].length===max)
+                {
+                    strText=arrnhap[i];
+                    break;
+                }
+                let t=arrnhap.toString();
+                xuat.value=`tu dai nhất là ${strText} xuất hiện ở vị trí ${t.indexOf(strText)}`;
+            }
+        }
+        function xoa()
+        {
+            nhap.value="";
+            xuat.value="";
+        }
+
+    </script>
+
+</body>
+</html>

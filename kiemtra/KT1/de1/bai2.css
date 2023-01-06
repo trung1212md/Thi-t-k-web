@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style: none;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: blue;
+    height: 40px;
+    line-height: 40px;
+    
+}
+.nav li:hover{
+    background-color: red;
+    /* width: 100px; */
+    
+}
+.nav li{
+    width: 120px    ;
+    text-align: center;
+}
+.nav>li
+{
+    position: relative;
+}
+.nav1{
+    background-color: blue;
+    display: none;
+    position: absolute;
+    width: 12 0px;
+    text-align: center;
+   
+    
+}
+.nav>li:hover> .nav1{
+    display: block;
+}
+

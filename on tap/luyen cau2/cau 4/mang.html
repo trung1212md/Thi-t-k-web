@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #container {
+            display: flex;
+            justify-content: center;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <table border="1" style="background-color: rgb(25, 206, 234);">
+            <tr>
+                <td colspan="2" style="font-weight: bold;">Sắp xếp mảng</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nhap">Nhập mảng:</label>
+                </td>
+                <td>
+                    <input type="text" name="nhap" id="dauVao">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="xuat">Mảng sau khi sắp xếp :</label>
+                </td>
+                <td>
+                    <input type="text" name="xuat" id="dauRa">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="xoa()">Hủy</button>
+                    <button onclick="sapXep()">Sắp xếp</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let dauVao = document.getElementById('dauVao');
+        let dauRa = document.getElementById('dauRa');
+
+        //Hàm để sắp xếp
+        function sapXep() {
+            let duLieuDauVaoStr = dauVao.value;
+            let duLieuDauVao = duLieuDauVaoStr.split(',');
+            let chan = [];
+            let le = [];
+            let zero = [];
+            for (let i = 0; i < duLieuDauVao.length; i++) {
+                if (duLieuDauVao[i] % 2 != 0) {
+                    le = [...le, duLieuDauVao[i]];
+                }
+                else if (duLieuDauVao[i] % 2 == 0 && duLieuDauVao[i] !== '0') {
+                    chan = [...chan, duLieuDauVao[i]];
+                }
+                else {
+                    zero = [...zero, duLieuDauVao[i]];
+                }
+            }
+
+            let t = chan.concat(zero, le);
+            t = t.toString();
+            dauRa.value = t;
+        }
+
+        //Hàm để hủy
+        function xoa() {
+            dauVao.value = "";
+            dauRa.value = "";
+        }
+    </script>
+</body>
+
+</html>

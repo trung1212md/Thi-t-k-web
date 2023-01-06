@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Ngày tháng năm sinh: 
+        <select name="day" id="day"></select>
+        <select name="month" id="month"></select>
+        <select name="year" id="year"></select>
+    </p>
+</body>
+
+<script>
+        let day=document.getElementById("day");
+        let month=document.getElementById("month")
+        let year=document.getElementById("year")
+
+        for(let i=1;i<=31;i++)
+        {
+            // tao cai tuy chon
+            let b=document.createElement("option")
+            b.value=i;
+            b.textContent=i;
+            day.appendChild(b);
+        }
+
+        for(let i=1;i<=31;i++)
+        {
+            // tao cai tuy chon
+            let b=document.createElement("option")
+            b.value=i;
+            b.textContent=i;
+            month.appendChild(b);
+        }
+
+
+        for(let i=1900;i<=2100;i++)
+        {
+            let b=document.createElement("option");
+            b.value=i;
+            b.textContent=i;
+            year.appendChild(b);
+        }
+</script>
+</html>

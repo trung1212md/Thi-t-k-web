@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var soluong ,x;
+        // var ds=new Array(100);
+        // soluong=prompt("nhap ho ten :",5);
+        // for(let i=0;i<soluong;i++){
+        //     ds[i]=prompt("nhap ho va ten","");
+        // }
+        // ds.sort();
+
+        // document.write("danh sach sau khi sap xep la")
+        // for(x in ds)
+        // {
+        //     document.write(ds[x]);
+        //     document.write("<br>");
+        // }
+
+        var soluong ,x;
+        var ds=new Array();
+        soluong=prompt("nhap so luong ",5);
+
+        for(let i=0;i<soluong;i++)
+        {
+            ds[i]=prompt("nhap ho va ten","");
+
+        }
+
+        ds.sort();
+        document.write("danh sach sau khi sap sep:");
+        for(x in ds)
+        {
+            document.write(ds[x]);
+            document.write("<br>");
+        }
+        
+    </script>
+</body>
+</html>

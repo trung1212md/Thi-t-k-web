@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="soThu1">
+    <input type="text" id="soThu2">
+    <input type="text" id="ketQua">
+    <button onclick="tinh()">Tìm</button>
+
+    <script>
+        function tinh() {
+            let a = parseInt(document.getElementById('soThu1').value);
+            let b = parseInt(document.getElementById('soThu2').value);
+            let i;
+            if(a>=b) {
+                i = a;
+                while(i >=a) {
+                    if(i%a ===0 && i%b===0){
+                        document.getElementById('ketQua').value = i;
+                        break;
+                    }
+                    i++;
+                }
+            }
+            else {
+                i = b;
+                while(i >=b) {
+                    if(i%a ===0 && i%b===0){
+                        document.getElementById('ketQua').value = i;
+                        break;
+                    }
+                    i++;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

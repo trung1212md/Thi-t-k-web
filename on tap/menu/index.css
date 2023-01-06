@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+.sub_menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: blue;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+.sub_menu li{
+    width: 100px;
+    align-content: center;
+}
+.sub_menu li:hover{
+    background-color: red;
+}
+ul>li:hover ul{
+    display: block;
+}
+.sub_menu1{
+    background-color: blue;
+    position: absolute;
+    display: none;
+
+}

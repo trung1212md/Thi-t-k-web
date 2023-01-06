@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            width: 500px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 3px 6px 10px rgba(81, 75, 75, 0.649);
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 2px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="">
+            <div class="username">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password">
+            </div>
+            <button type="button" onclick="check()">Kiểm tra password</button>
+        </form>
+    </div>
+
+    <script>
+        let username = document.getElementById('username');
+        let password = document.getElementById('password');
+
+        //Biến với điều kiện là phải có ít nhất 1 chữ hoa, 1 chữ thường, 1 chữ số và độ dài từ 8 trở lên
+        let rex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$/;
+
+        //Biến với điều kiện không phải bắt đầu từ số
+        let num = /^[^0-9]$/;
+
+        function check() {
+            let v = password.value;
+
+            // Kiểm tra xem v có thỏa mãn điều kiện là phải có ít nhất 1 chữ hoa, 1 chữ thường, 1 chữ số và độ dài từ 8 trở lên
+            // Và điều kiện ký tự đầu tiên không phải là số hoặc là không để trống cả 2 mục username và password ==> nhập đúng
+            if((rex.test(v) && num.test(v.charAt(0))) || (username.value !=="" && v !=="")) {
+                alert("Bạn nhập đúng");
+            }
+            else {
+                alert("Bạn nhập sai");
+            }
+        }
+    </script>
+</body>
+</html>

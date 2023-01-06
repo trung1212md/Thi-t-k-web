@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <table border="1" style="background-color: rgb(25, 206, 234);">
+            <tr>
+                <td colspan="2">
+                    <h2>Tìm từ dài nhất</h2>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Nhập xâu:</label></td>
+                <td><input type="text" name="" id="nhap"></td>
+            </tr>
+            <tr>
+                <td><label for="">Thông báo kết quả:</label></td>
+                <td><input type="text" name="" id="ketQua"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="xoa()">Xóa</button>
+                    <button onclick="search()">Tìm kiếm</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let nhap = document.getElementById('nhap');
+        let xuat = document.getElementById('ketQua');
+
+        function search() {
+            let arrNhap = nhap.value.split(' ');
+            let max = arrNhap[0].length;
+            let strText;
+            for (let i = 0; i < arrNhap.length; i++) {
+                if (arrNhap[i].length > max) {
+                    max = arrNhap[i].length;
+                }
+            }
+            for (let i = 0; i < arrNhap.length; i++) {
+                if (arrNhap[i].length === max) {
+                    strText = arrNhap[i];
+                    break;
+                }
+            }
+            let t = arrNhap.toString();
+            xuat.value = `Từ dài nhất là ${strText} xuất hiện ở vị trí ${t.indexOf(strText)}`;
+        }
+
+        function xoa() {
+            nhap.value = "";
+            xuat.value = "";
+        }
+    </script>
+</body>
+
+</html>

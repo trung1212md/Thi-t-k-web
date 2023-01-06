@@ -1,0 +1,74 @@
+          
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+                <style>
+                    .d1{
+                        display: flex;
+                    }
+                    .comba{
+                        margin-right: 20px;
+                        margin-top: 20px;
+                    }
+                </style>
+            </head>
+            <body>
+                
+                
+                    <table>
+                        <tr>
+                           <td> <label for="">Nhap thang:</label></td>
+                            <td><input type="text" id="thang"></td>
+                        </tr>
+                       
+                        <tr>
+                            <td> <label for="">Nhap nam:</label></td>
+                             <td><input type="text" id="nam"></td>
+                         </tr>
+                         <tr>
+                            <td> <label for="">ngay:</label></td>
+                            <td>
+                                <input type="text" id="ngay">
+                            </td>
+                                
+                        </tr>
+                        <button onclick="fun()">so ngay</button>
+                    </table>
+                
+            
+                <script>
+                    
+            
+            
+                    function fun()
+                    {
+                        let thang=document.getElementById("thang").value;
+                        let name=document.getElementById("nam").value;
+                        let ngay;
+            
+                        if(thang==1||thang==3||thang==5||thang==7||thang==8||thang==10||thang==12)
+                        {
+                            ngay=31;
+                        }
+                        else{
+                            ngay=30;
+                        }
+                        if(thang==2&&nam%4==0)
+                        {
+                            ngay=29;
+                        }
+                        if(thang==2&&nam%4!=0)
+                        {
+                            ngay=28
+                        }
+            
+                        document.getElementById("ngay").value=ngay;
+                    }
+                </script>
+                
+            </body>
+            </html>

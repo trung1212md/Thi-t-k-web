@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <table>
+            <tr>
+                <th>so thu nhat </th>
+                <th><input type="text" id="sothu1"></th>
+            </tr>
+            <tr>
+                <th>so thu hai </th>
+                <th><input type="text" id="sothu2"></th>
+            </tr>
+            <tr>
+                <th>ket qua</th>
+                <th><input type="text" id="ketqua"></th>
+
+
+                <button onclick="tinh()">Tinh</button>
+            </tr>
+        </table>
+    
+
+    <script>
+        function tinh()
+        {
+            let a=document.getElementById("sothu1").value;
+            let b=document.getElementById("sothu2").value;
+            let i;
+
+           if(a>=b)
+           {
+            i=a;
+            while(i>=a)
+            {
+                if(i%a===0&&i%b===0)
+                {
+                    document.getElementById("ketqua").value=i;
+                    break;
+                }
+                i++;
+            }
+           }
+           else
+           {
+            i=b;
+            while(i>=b)
+            {
+                if(i%a===0&&i%b===0)
+                {
+                    document.getElementById("ketqua").value=i;
+                    break;
+                }
+                i++;
+            }
+           }
+            
+        }
+    </script>
+</body>
+</html>
